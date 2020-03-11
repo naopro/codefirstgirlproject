@@ -1,0 +1,131 @@
+/* SCROLLING BANNER */
+.GeneratedMarquee {
+    font-family:Courier, monospace;
+    font-size:1.3em;
+    font-variant:small-caps;
+    line-height:1.3em;
+    color:#333333;
+    background-color:#FFFFCC;
+    padding:0em;
+    border-style: groove;
+}
+
+
+/* PAGE TITLE */
+.pgtitle{
+    background-color: rgb(255, 255, 255);
+    color:orange;
+    padding: 10px;
+    font-family: 'Dosis', sans-serif;
+    display: flex;
+    justify-content: center;
+  }
+
+/* Julie: I added an idea of website logo */
+.pglogo {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding: 10px;
+    max-width: auto;
+    height: auto;
+  }
+
+
+/* MENU BAR */
+/* Julie: I just changed the background colour */
+.menu{
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: orange;
+  display: flex;
+  justify-content: space-evenly;
+  color: steelblue;
+  margin: 0px;
+  padding: 0px 0px 0px;
+  position: relative;
+  width: 100%;
+}
+
+/* HOVER FOR MENU LINKS */
+.menu a:hover{
+  color: rgb(15, 50, 80);
+  background-color: wheat;
+  font-weight: 100;
+}
+
+/* PROPERTIES FOR UNVISITED LINKS */
+a:not(.fa){
+  color: rgb(20, 50, 77);
+  background-color: transparent;
+  text-decoration: none;
+  padding: 25px;
+}
+
+/* PROPERTIES FOR VISITED LINKS */
+a:visited{
+    color: steelblue;
+    background-color: transparent;
+}
+
+/* HOVER FOR LINKS */
+a:hover{
+  color: rgb(15, 50, 80);
+  background-color: transparent;
+  font-weight: 100;
+}
+.footer a:hover{
+  background-color: wheat;
+}
+
+/* Julie: footer idea */
+.footer{
+    background-color: steelblue;
+    color: white;
+    font-family: 'Dosis', sans-serif;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    justify-content: space-evenly;
+    display: flex;
+    vertical-align: bottom;
+        }
+
+.orangeButton {
+    background-color: orange;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+        }
+
+/* Style for social media icons */
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    text-decoration: none;
+    background-color: orange;
+    color: white;
+  }
+
+  
+  @media only screen and (max-width: 700px) {
+    .responsive {
+      width: 49.99999%;
+      margin: 6px 0;
+    }
+  }
+  
+  @media only screen and (max-width: 500px) {
+    .responsive {
+      width: 100%;
+    }
+  }
+  
+  

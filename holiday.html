@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+    <title>Travel For Good | Book your trip</title>
+    <head>
+        <link rel="shortcut icon" type="image/png" href="./pin.png"/>
+        <link rel="stylesheet" type="text/css" href="main.css" />
+        <link rel="stylesheet" type="text/css" href="holiday.css" />
+        <link href="https://fonts.googleapis.com/css?family=Bad+Script&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Dosis:300&display=swap" rel="stylesheet">
+        <script src="./DOM.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <header>
+        <div class="banner">
+            <marquee class="GeneratedMarquee" direction="left" scrollamount="7" behavior="scroll">
+                🦠⚠️ Please visit our Travel Advice page for the latest information regarding the Coronavirus (COVID-19) 🦠⚠️
+            </marquee>
+        </div>
+        
+        <div class="pglogo">
+            <img src= "./logoT.png" >
+        </div>
+
+        <div class="pgtitle">
+            <h1>Where would you like to visit?</h1>
+        </div>
+    </header>
+
+    <body>
+
+<!-- MENU/NAVIGATION BAR -->
+        <div class="menu">
+                <a href="./holiday.html">Your Next Trip</a>
+                <a href="./coronavirus.html">Travel Advice</a>
+                <a href="./giveback.html">Give Back</a>
+                <a href= "#footer">Contact Us</a>
+        </div>
+    
+
+<!-- BOOKING FORM -->
+    <div class="formBlock">
+        <div class="formPreamble">
+            
+            <h2 id="name"> <h2>
+                It is time to plan your perfect trip<h2 id="name"></h2>
+            </h2>
+
+            <article>
+                <p>
+                    <i>
+                    At Travel For Good, we want you to have a perfect holiday.<br><br>
+                    Our experienced and supportive team can create a holiday bespoke to your needs and desires, ensuring that everything runs smoothly from booking onwards.<br><br>
+                    Simply complete the below form, setting out your preferences and requests and a member of our team will contact you within 48 hours to discuss how we can make your desired holiday a reality.
+                    </i>
+                </p>
+            </article>
+        </div>
+
+        <div class="bookingform">
+            <form id="bookingform" onsubmit="thankU()">
+
+                <!-- PERSONAL INFORMATION -->
+                <p><b>About You</b></p>
+                <label for="Title">Title:</label>
+                    <select id="Title" required>
+                        <option value="Miss">Miss</option>
+                        <option value="Mrs">Mrs</option>
+                        <option value="Ms">Ms</option>
+                        <option value="Mr">Mr</option>
+                        <option value="Mx">Mx</option>
+                        <option value="Dr">Dr</option>
+                        <option value="Lord">Lord</option>
+                        <option value="Lady">Lady</option>
+                    </select>
+                <br>
+
+                <label for="FName">First Name:</label>
+                <input type="text" id="Fname" value="" maxlength="90" style="width:150px" oninput="addName()">
+                <script>
+                    function addName() {
+                    var x = document.getElementById("Fname").value;
+                    document.getElementById("name").innerHTML = x + "," ;
+                  }
+                </script>
+
+                <br>
+                <label for="LName">Last Name:</label>
+                <input type="text" name="name" maxlength="90" style="width:152px">
+                <br>
+                <br>
+
+                <!-- CONTACT DETAILS -->
+                <p><b>Your Details</b></p>
+                <label for="email">What is your email address? (We will never send you spam)</label>
+                <input type="email" id="email" name="email" maxlength="90" style="width:250px">
+                <br>
+                <label for="phone">What is your telephone or mobile number?</label>
+                <input type="email" id="phone" name="phone" maxlength="90" style="width:250px">
+                <br>
+
+                <!-- HOLIDAY RELATED QUESTIONS -->
+
+                <label for="date">When you would like to depart?</label>
+                <input type="date" id="depart" name="departDate">
+                <br>
+                <label for="date">When you would like to return?</label>
+                <input type="date" id="return" name="returnDate">
+                <br>
+                If your dates are flexible, please check here:<input type="checkbox" name="flex" value="0">
+                <br>
+                <br>
+                <p><b>Number of Travellers</b></p>
+                <label for="travellers">How many persons, including yourself, will be travelling:</label>
+                    <select id="travellers">
+                        <option value="0">1</option>
+                        <option value="1">2</option>
+                        <option value="2">3</option>
+                        <option value="3">4</option>
+                        <option value="4">5</option>
+                        <option value="5">6</option>
+                        <option value="6">Over 6</option>
+                    </select>
+                <br>
+                <br>
+                <p><b>Your Bespoke Holiday</b></p>
+                Which continent would you like to visit?<br>
+                <input type="radio" name="continent" value="0"> Europe
+                <input type="radio" name="continent" value="1"> Asia
+                <input type="radio" name="continent" value="2"> Australasia
+                <input type="radio" name="continent" value="3"> North America
+                <input type="radio" name="continent" value="4"> South America
+                <br>
+                <br>
+
+               
+            </form>
+
+            <form>
+                While on holiday, which of the following would you/your party be interested in? (Check as many as you like)<br>
+                <input type="checkbox" name="activities" value="0"> Watersports
+                <input type="checkbox" name="activities" value="0"> Shopping
+                <input type="checkbox" name="activities" value="0"> Spa
+                <input type="checkbox" name="activities" value="0"> Food Tour/Wine tasting
+                <input type="checkbox" name="activities" value="0"> Yoga Retreat
+                <input type="checkbox" name="activities" value="0"> Local Guide
+
+                <br>
+                <br>
+            <!-- SPECIAL REQUESTS  -->
+                Any special requests e.g. Eco-Tourism or Sustainable Resort:
+                <br><br>
+                <textarea rows="5" cols="80" maxlength="200" name="msg"></textarea>
+                <br>
+                
+            <!-- FORM SUBMIT BUTTON -->
+                <input type="submit" value="Submit Holiday Request Form"  onclick="thankU()" >
+                <script>document.getElementById("bookingform").addEventListener("submit", thankU);
+                    function thankU() {
+                          alert("Thank you. You are now one step closer to your dream holiday. \nA member of the team will contact you within 48 hours.");
+                    }</script>
+            </form>
+        </div>
+    </div>
+
+<!-- IMAGE GALLERY -->
+    <div class="casePic">
+        <img src="./case.jpeg" width="400" height="280">
+    </div>
+
+    <div class="gallery">
+        <img id="continentPics" src="./wing.jpeg" width="400" height="400">
+    </div>
+
+
+<!-- F O O T E R -->
+<footer id="footer">
+    <div class= "footer">
+        <div class="Contact_Button">
+            <p>
+            <button class="orangeButton" onclick="window.location.href ='mailto:hello@travelforgood.com';">Contact Us</button>
+            </p>
+        </div>
+        <div class="copyright">
+            <p> Copyright © 2020 | Code First Girls | Travel For Good</p>
+        </div>
+        <div class="socialmedia">
+        <a href="https://www.facebook.com/codefirstgirls/" class="fa fa-facebook"></a>
+        <a href="https://twitter.com/CodeFirstGirls" class="fa fa-twitter"></a>
+        <a href="https://www.instagram.com/codefirstgirls/" class="fa fa-instagram"></a>
+        <a href="https://www.linkedin.com/company/code-first-girls/" class="fa fa-linkedin"></a>
+        </div>
+    </div>
+</footer>
+</div>
