@@ -1,0 +1,180 @@
+.pglogo {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  padding: 10px;
+  width: auto;
+  height: auto;
+  size: inherit;
+  border: white solid 1px;
+  background-color: white;
+}
+.GeneratedMarquee {
+  font-family:Courier, monospace;
+  font-size:1.3em;
+  font-variant:small-caps;
+  line-height:1.3em;
+  color:#333333;
+  background-color:#FFFFCC;
+  padding:0em;
+  border-style: groove;
+}
+
+h1
+{
+ color: rgb(238, 160, 16) ;
+ background: steelblue;
+ align-content: center;
+ text-align: center;
+ font-size: 40px;
+
+}
+
+/* MENU BAR */
+.menu{
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: orange;
+  display: flex;
+  justify-content: space-evenly;
+  color: steelblue;
+  margin: 0px;
+  padding: 0px 0px 0px;
+  position: relative;
+  width: 100%;
+}
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url("./China-coronavirus-4.jpg") ;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.division{
+  background-color: rgb(238, 160, 16);
+  display: flex;
+  justify-content: space-evenly;
+  color: steelblue;
+  margin: 0px;
+  padding: 30px 25px 30px;
+  padding: 40px;
+  margin: 50px auto;
+  
+}
+.container {
+  border-radius: 25px; 
+  background: whitesmoke;
+  width: 50%;
+  padding: 40px;
+  margin: 100px auto;
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+.container:hover .middle {
+ 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  opacity: 1;
+  border: orange solid 2px ;
+  -ms-flex-align: center;
+  text-transform: inherit;
+}
+
+.text {
+  background-color: rgb(84, 109, 245);
+  color: white;
+  font-size: 16px;
+  padding: 10px 20px;
+
+}
+
+.footer{
+  background-color: steelblue;
+  color: white;
+  font-family: 'Dosis', sans-serif;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  justify-content: space-evenly;
+  display: flex;
+  vertical-align: bottom;
+      }
+
+.orangeButton {
+  background-color: orange;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+      }
+
+    
+/* Style for social media icons */
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 20px;
+  text-align: center;
+  text-decoration: none;
+  background-color: orange;
+  color: white;
+    }
+
+/* PROPERTIES FOR UNVISITED LINKS */
+a:not(.fa){
+  color: rgb(20, 50, 77);
+  background-color: transparent;
+  text-decoration: none;
+  padding: 25px;
+}
+
+/* PROPERTIES FOR VISITED LINKS */
+a:visited{
+  color: steelblue;
+  background-color: transparent;
+}
+
+/* HOVER FOR LINKS */
+a:hover{
+  color: rgb(15, 50, 80);
+  background-color: wheat;
+  font-weight: 100;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
